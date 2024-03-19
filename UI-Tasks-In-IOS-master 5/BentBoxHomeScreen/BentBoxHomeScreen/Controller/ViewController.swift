@@ -26,7 +26,7 @@ class ViewController: UIViewController {
    }
     
     func setupSlider(){
-        customSlider.layer.cornerRadius = customSlider.frame.size.height * 0.40
+        customSlider.layer.cornerRadius = customSlider.frame.size.height * 0.45
         let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(touched(_:)))
         SliderImage.addGestureRecognizer(gestureRecognizer)
         SliderImage.isUserInteractionEnabled = true
@@ -44,8 +44,8 @@ class ViewController: UIViewController {
                   // limit the scrolls to the edges of the parent view
                   if newPos < 10 {
                       newPos = 0
-                  } else if newPos > customSlider.frame.size.width/1.55 {
-                      newPos = customSlider.frame.size.width/1.55
+                  } else if newPos > customSlider.frame.size.width/1.5 {
+                      newPos = customSlider.frame.size.width/1.35
                   }
 
                   touchedView.frame.origin.x = newPos

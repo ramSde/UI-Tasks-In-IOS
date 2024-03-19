@@ -61,12 +61,11 @@ func     setupDiscoverisCollectionView() {
     func setupviews(){
         changeToDarkOrLightModeView.layer.cornerRadius = changeToDarkOrLightModeView.frame.size.height * 0.12
         RoutesView.layer.cornerRadius = RoutesView.frame.size.height * 0.12
-        latestDisvoriesView.layer.cornerRadius = latestDisvoriesView.frame.size.height * 0.12
-        spotLightView.layer.cornerRadius = spotLightView.frame.size.height * 0.09
+        latestDisvoriesView.layer.cornerRadius = latestDisvoriesView.frame.size.height * 0.125
+        spotLightView.layer.cornerRadius = spotLightView.frame.size.height * 0.05
         addReminderView.layer.cornerRadius = addReminderView.frame.size.height * 0.09
         dailySpotLightCountView.layer.borderWidth = 1
         dailySpotLightCountView.layer.cornerRadius = dailySpotLightCountView.frame.size.height * 0.4
-       
         dailySpotLightCountView.layer.borderColor = UIColor(named: "AppThemeColor")?.cgColor
       
 
@@ -80,7 +79,7 @@ func     setupDiscoverisCollectionView() {
 }
 
 
-extension initialViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension initialViewController: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count
@@ -92,4 +91,8 @@ extension initialViewController: UICollectionViewDelegate, UICollectionViewDataS
             cell.imageForDiscoveries.image = UIImage(named: data[indexPath.section])
             return cell
         }
+   
+
+    
+
 }

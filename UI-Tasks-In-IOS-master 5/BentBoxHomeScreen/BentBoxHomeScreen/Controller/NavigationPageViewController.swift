@@ -39,7 +39,7 @@ class NavigationPageViewController: UIViewController {
     }
     
     func setupStatsCollectionView() {
-        statsView.layer.cornerRadius = statsView.frame.size.height * 0.125
+        statsView.layer.cornerRadius = statsView.frame.size.height * 0.135
         
         statasticCollectionView.delegate = self
         statasticCollectionView.dataSource = self
@@ -160,7 +160,7 @@ extension NavigationPageViewController: UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width / 4, height: collectionView.bounds.height)
+        return CGSize(width: collectionView.bounds.width * 0.2215, height: collectionView.bounds.height * 0.95)
     }
 }
 
